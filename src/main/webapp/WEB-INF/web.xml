@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="4.0" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd">
+
+    <servlet>
+        <servlet-name>Agregar</servlet-name>
+        <servlet-class>controlador.Agregar</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Agregar</servlet-name>
+        <url-pattern>/agregar</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Lista</servlet-name>
+        <servlet-class>controlador.Lista</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Lista</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Eliminar</servlet-name>
+        <servlet-class>controlador.Eliminar</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Eliminar</servlet-name>
+        <url-pattern>/eliminar</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Editar</servlet-name>
+        <servlet-class>controlador.Editar</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Editar</servlet-name>
+        <url-pattern>/editar</url-pattern>
+    </servlet-mapping>
+
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <data-source>
+        <description>DataSource</description>
+        <name>java:app/psql</name>
+        <class-name>org.postgresql.ds.PGSimpleDataSource</class-name>
+        <server-name>localhost</server-name>
+        <port-number>5432</port-number>
+        <database-name>master_clientes</database-name>
+        <user>postgres</user>
+        <password>postgres</password>
+    </data-source>
+</web-app>
