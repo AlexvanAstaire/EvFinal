@@ -10,7 +10,7 @@
 
 </head>
 <body>
-<h1>Ingresar persona a DB</h1>
+<h1>Crear persona</h1>
 <form name="formulario" action="agregar" method="get" class="form">
     <div class="form-group">
         <label for="formId">ID</label>
